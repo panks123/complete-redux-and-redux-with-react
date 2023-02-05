@@ -1,0 +1,51 @@
+Redux - Redux is a Javascript library. It is a state container which is used to manage the 
+state of a JS application in a predictable way.
+
+Three main components of Redux:
+
+1. Store : The centralized place which holds the state of the application
+2. Action : That describes the changes which can be used to update the state of the application
+3. Reducer : Carries out the transition of the state of the application depending on what is described by the Action
+
+
+Three principles of Redux:
+
+1. The state of the application is stored in an object tree within a "single store"
+
+2. The only way to change the state of the application is to dispatch an action which will describe what should happen to the application state
+
+3. To specify how the state of the application change based on the action, we write pure reducers.  
+
+
+Actions: Actions are plain JS objects with type attribute that indicates the type of the action to be performed
+        The 'type' property is defined with values as string constatnts
+
+        e.g. : 
+        const BUY_CAKE = 'BUY_CAKE'
+        {
+            type: BUY_CAKE
+        }
+
+
+Action creator : It is function that returns an action
+
+e.g.
+
+function buyCake(){
+    // return an action
+
+    return {
+        type: BUY_CAKE
+    }
+}
+
+
+Reducers - Specify how the application's state should change in response to the actions which are sent to it to change the state
+
+A Reducer is a function that accepts two arguments the current state and an action, and returns next state of the application based on the action
+
+Syntax : 
+reducer = (prevState, action)=> { return newState}
+
+
+
